@@ -52,7 +52,7 @@ RewriteRule ^(.*?)([^/]*)$ $1index.php?$2 [QSA,PT,L]
 #### nginx伪静态
 ```
 location ~* \.(htm)$ {
-    rewrite "^(.*)/(.+?).htm(.*?)$"$1/index.php?$2.htm$3last;
+    rewrite "^(.*)/(.+?).htm(.*?)$" $1/index.php?$2.htm$3 last;
 }
 ```
 
